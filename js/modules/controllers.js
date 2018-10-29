@@ -23,15 +23,21 @@ app.controller('addCandidateCtrl',function($scope,Web3jsObj,getRole,$window,Fire
      }
     const auth =  FireBaseObj.getFireBaseAuth();
 ///// fill dropDownList
+let hash = localStorage.getItem('lang')  == "Eng" ? "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo" :
+"QmWNRScwsE6jBVWhZyTzfANXfvQk9HXBKWaQXWV6i5vWVf"; 
 let ipfs = IpfsApi('ipfs.infura.io', '5001', {protocol: 'https'})
-ipfs.files.cat('QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo', (error, buf) => {
-   
+ipfs.files.cat("QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo", (error, buf) => {
+   debugger;
     if(error) console.log(error);
     let result = buf.toString('utf8');
     result = JSON.parse(result);
+
+    
     $scope.countries = result.lang;
     
   })
+
+
 
 //// end of filling dropDownList
 $scope.logout=function(){
