@@ -89,19 +89,19 @@
                                                             <span class="form-error" ng-show="userFound">user already exist </span>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Name</span>
+                                                            <span class="input-label">{{lang.Name}}</span>
                                                             <input type='text' class="form-control"  name="name" ng-model="candidateData.name" required>
                                                             <span class="form-error" ng-show="addForm.name.$touched && addForm.name.$invalid">this field is required</span>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Date Of Birth</span>
+                                                            <span class="input-label">{{lang.DateOfBirth}}</span>
                                                             <input type='text' class="form-control" name="dateOfBirth" ng-model="candidateData.dateOfBirth" required>
                                                             <span class="form-error" ng-show="addForm.dateOfBirth.$touched && addForm.dateOfBirth.$invalid">this field is required</span>
                                             
                                                           </label>
                                             
                                                           <label class="item item-input">
-                                                            <span class="input-label">Password</span>
+                                                            <span class="input-label">{{lang.Password}}</span>
                                                             <input name="password" class="form-control" type="password" ng-model="candidateData.password" required>
                                                             <span class="form-error" ng-show="addForm.password.$touched && addForm.password.$invalid">this field is required</span>
                                                             
@@ -109,7 +109,7 @@
                                                           </label>
                                                           
                                                           <label class="item item-input">
-                                                            <span class="input-label">Password Confirmation</span>
+                                                            <span class="input-label">{{lang.PasswordConfirmation}}</span>
                                                             <input name="passwordConfirmation" class="form-control" type="password" ng-model="candidateData.passwordConfirmation" required>
                                                             <span class="form-error" ng-show="addForm.passwordConfirmation.$touched && addForm.passwordConfirmation.$invalid">this field is required</span>
 
@@ -121,7 +121,7 @@
                                                            <div>
                                                             <label class="item item-input">
                                                            
-                                                                <span class="input-label">City</span> 
+                                                                <span class="input-label">{{lang.City}}</span> 
                                                                 <select name="city" ng-model="candidateData.city" class="form-control">
                                                                   
                                                                   <option ng-repeat="x in countries" value={{x}}>{{x}}</option>
@@ -148,14 +148,14 @@
                                                         </div>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Year</span>
+                                                            <span class="input-label">{{lang.Year}}</span>
                                                             <input name="year" type="text" class="form-control" ng-model="candidateData.year" required>
                                                             <span class="form-error" ng-show="addForm.year.$touched && addForm.year.$invalid">this field is required</span>
                                                             
                                             
                                                           </label>
                                                           <label class="item item-input">
-                                                                <span class="input-label">Phone Number</span>
+                                                                <span class="input-label">{{lang.PhoneNumber}}</span>
                                                                 <input name="phoneNumber" type="text" class="form-control" ng-model="candidateData.phoneNumber" required>
                                                                 <span class="form-error" ng-show="addForm.phoneNumber.$touched && addForm.phoneNumber.$invalid">this field is required</span>
                                                                 
