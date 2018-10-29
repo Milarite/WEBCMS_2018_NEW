@@ -1195,6 +1195,23 @@ app.controller("addJudgmentCtrl",function($scope,FireBaseObj,$window,Web3jsObj)
 
 {
     const auth =  FireBaseObj.getFireBaseAuth();
+    $scope.switchLanguage=function(){
+       var lang= localStorage.getItem();
+       if(lang==null){
+           localStorage.setItem("lang","AR");
+
+           
+       }
+else if(lang=="AR")
+
+
+{
+    localStorage.setItem("lang","Eng");
+}
+else{
+    localStorage.setItem("lang","AR");
+    }
+    }
 
     $scope.logout=function(){
         localStorage.removeItem("candidate_nationalId" );
