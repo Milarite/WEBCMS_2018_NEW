@@ -10,8 +10,7 @@
                                                     <!-- CSS Files -->
                                                     <link href="./css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
                                                     <link href="./css/custom.css" rel="stylesheet"/>
-                                                 
-                                                 
+                                                 <link href="./css/no.css" rel="stylesheet">
                                             
                                                     <!--     Fonts and icons     -->
                                             
@@ -73,7 +72,7 @@
                                                 <body>
                                                         <div class="wrapper" ng-app="starter">
                                                                 <div class="main-panel" ng-controller="addCandidateCtrl">
-                                           <div ng-include="'shared/header.html'"></div>
+                                           <div ng-include="'shared/header.html'"></div> 
                                            <div class="content">
                                                 <div class="container-fluid">
                                            <div class="row">
@@ -182,11 +181,15 @@
                                             </div>
                                             </div>
 
-
+                                            
                                         </div>
+                                        
                                         </div>
                                      </body>
 <script>
-                                              
- </script>
+          $(function(){
+  
+  //document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+})
+</script>                                      
                                         </html>

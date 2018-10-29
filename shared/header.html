@@ -1,6 +1,11 @@
 
     
-                                            
+      <script>
+          $(function(){
+  
+            document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+          })
+          </script>                                        
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 
@@ -61,6 +66,12 @@
             <p>Logout</p>
           </a>
         </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="javascript:void(0)" onclick="switchLanguage()">
+              <i class="material-icons">arabic</i>
+              <p>arabic</p>
+            </a>
+          </li>
         <!-- <li class="nav-item active-pro ">
               <a class="nav-link" href="./upgrade.html">
                   <i class="material-icons">unarchive</i>
@@ -74,7 +85,7 @@
 
           <!-- Navbar -->
           <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
-            <div class="container-fluid">
+            <div class="container cust-cont">
               <div class="navbar-wrapper">
                <a class="navbar-brand" href="#pablo">Voting App CMS</a>
               </div>
@@ -134,3 +145,6 @@
 
 
     -->
+
+    
+  
