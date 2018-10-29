@@ -12,7 +12,30 @@ NationalNumber : "الرقم الوطني"
 
 
 
- } : { NationalNumber : "National Number"}
+ } : { 
+     NationalNumber : "National Number",
+     Name:"Name",
+     DateOfBirth: "Date Of Birth" ,
+     Password: "Password",
+     PasswordConfirmation: "Password Confirmation",
+     city:"City",
+     Year:"Year",
+     PhoneNumber:"Phone Number",
+     Campaign:"Campaign",
+     addCandidate:"Add Candidate",
+     viewCandidates:"View candidate",
+     adminPanel:"Admin panel",
+     addCandidate:"Add candidate",
+     addJudjment:"Add Judjment",
+     settings:"Settings",
+     logout:"Logout",
+     VotingAppCMS,"Voting App CMS",
+     
+
+
+
+}
+
 
  $rootScope.lang  = lang;
 
