@@ -29,8 +29,8 @@ NationalNumber : "الرقم الوطني"
      addJudjment:"Add Judjment",
      settings:"Settings",
      logout:"Logout",
-     VotingAppCMS,"Voting App CMS",
-     
+     VotingAppCMS:"Voting App CMS",
+
 
 
 
