@@ -5,7 +5,8 @@ angular.module('starter', [ 'starter.controllers','starter.services','starter.di
 
  let lang =  localStorage.getItem("ar") ? {
 
-NationalNumber : "الرقم الوطني"
+NationalNumber : "الرقم الوطني",
+
 
 
 
