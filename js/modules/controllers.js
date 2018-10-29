@@ -1211,6 +1211,7 @@ else if(lang=="AR")
 else{
     localStorage.setItem("lang","AR");
     }
+    location.reload();
     }
 
     $scope.logout=function(){
