@@ -10,8 +10,7 @@
                                                     <!-- CSS Files -->
                                                     <link href="./css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
                                                     <link href="./css/custom.css" rel="stylesheet"/>
-                                                 
-                                                 
+                                                    <link href="./css/no.css" rel="stylesheet">
                                             
                                                     <!--     Fonts and icons     -->
                                             
@@ -53,7 +52,8 @@
 <script src="./js/modules/angular-time-picker.js"></script>
 <script src="./js/modules/angular-datepicker.js"></script>
 <script src="./js/modules/directives.js"></script>
-                                                  <!-- app module-->
+<script src="./js/modules/ipfsApi.js"></script>                                                  <!-- app module-->
+                                                 <!-- app module-->
 <script src="./js/modules/abi.js"></script>
 <script src="./js/modules/app.js"></script>
 <script src="./js/modules/service.js"></script>
@@ -72,7 +72,7 @@
                                                 <body>
                                                         <div class="wrapper" ng-app="starter">
                                                                 <div class="main-panel" ng-controller="addCandidateCtrl">
-                                           <div ng-include="'shared/header.html'"></div>
+                                           <div ng-include="'shared/header.html'"></div> 
                                            <div class="content">
                                                 <div class="container-fluid">
                                            <div class="row">
@@ -83,35 +83,35 @@
                                                
                                                 <form name="addForm" id="addForm">
                                                         <label class="item item-input">
-                                                            <span class="input-label">National Number</span>
+                                                            <span class="input-label">{{lang.NationalNumber}}</span>
                                                             <input type="text" ng-change="nationlIdValidation(candidateData.candidateId)" name="candidateId" ng-model="candidateData.candidateId" class="form-control" required>
-                                                            <span class="form-error" ng-show="addForm.candidateId.$touched && addForm.candidateId.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.candidateId.$touched && addForm.candidateId.$invalid">{{lang.thisfieldisrequired}}</span>
                                                             <span class="form-error" ng-show="userFound">user already exist </span>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Name</span>
+                                                            <span class="input-label">{{lang.Name}}</span>
                                                             <input type='text' class="form-control"  name="name" ng-model="candidateData.name" required>
-                                                            <span class="form-error" ng-show="addForm.name.$touched && addForm.name.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.name.$touched && addForm.name.$invalid">{{lang.thisfieldisrequired}}</span>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Date Of Birth</span>
+                                                            <span class="input-label">{{lang.DateOfBirth}}</span>
                                                             <input type='text' class="form-control" name="dateOfBirth" ng-model="candidateData.dateOfBirth" required>
-                                                            <span class="form-error" ng-show="addForm.dateOfBirth.$touched && addForm.dateOfBirth.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.dateOfBirth.$touched && addForm.dateOfBirth.$invalid">{{lang.thisfieldisrequired}}</span>
                                             
                                                           </label>
                                             
                                                           <label class="item item-input">
-                                                            <span class="input-label">Password</span>
+                                                            <span class="input-label">{{lang.Password}}</span>
                                                             <input name="password" class="form-control" type="password" ng-model="candidateData.password" required>
-                                                            <span class="form-error" ng-show="addForm.password.$touched && addForm.password.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.password.$touched && addForm.password.$invalid">{{lang.thisfieldisrequired}}</span>
                                                             
                                             
                                                           </label>
                                                           
                                                           <label class="item item-input">
-                                                            <span class="input-label">Password Confirmation</span>
+                                                            <span class="input-label">{{lang.PasswordConfirmation}}</span>
                                                             <input name="passwordConfirmation" class="form-control" type="password" ng-model="candidateData.passwordConfirmation" required>
-                                                            <span class="form-error" ng-show="addForm.passwordConfirmation.$touched && addForm.passwordConfirmation.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.passwordConfirmation.$touched && addForm.passwordConfirmation.$invalid">{{lang.thisfieldisrequired}}</span>
 
                                                     </label>
                                                           <!-- <label class="item item-input">
@@ -119,10 +119,14 @@
                                                             <input name="city" type="text" class="form-control" ng-model="candidateData.city" required>
                                                             <span class="form-error" ng-show="addForm.city.$touched && addForm.city.$invalid">this field is required</span> -->
                                                            <div>
-                                                            <label class="item item-input"> 
-                                                                <span class="input-label">City</span> 
+                                                            <label class="item item-input">
+                                                           
+                                                                <span class="input-label">{{lang.city}}</span> 
                                                                 <select name="city" ng-model="candidateData.city" class="form-control">
-                                                                  <option value="">Select City</option>                                                       
+                                                                  
+                                                                  <option ng-repeat="x in countries" value={{x}}>{{x}}</option>
+                                                                  <option value="">Select City</option> 
+                                                                  <!--                                                      
                                                               <option value="Amman">Amman</option>
                                                               
                                                               <option value="Irbid">Irbid</option>
@@ -135,36 +139,38 @@
                                                               <option value="Aqapa">Aqapa</option>
                                                               <option value="Rumtha">Rumtha</option>
                                                               <option value="salt">salt</option>
+                                                                  -->
+
                                                           
                                                             </select>
                                                           </label>
-                                                          <span class="form-error" ng-show="addForm.city.$touched && addForm.city.$invalid">this field is required</span>
+                                                          <span class="form-error" ng-show="addForm.city.$touched && addForm.city.$invalid">{{lang.thisfieldisrequired}}</span>
                                                         </div>
                                                           </label>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Year</span>
+                                                            <span class="input-label">{{lang.Year}}</span>
                                                             <input name="year" type="text" class="form-control" ng-model="candidateData.year" required>
-                                                            <span class="form-error" ng-show="addForm.year.$touched && addForm.year.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.year.$touched && addForm.year.$invalid">{{lang.thisfieldisrequired}}</span>
                                                             
                                             
                                                           </label>
                                                           <label class="item item-input">
-                                                                <span class="input-label">Phone Number</span>
+                                                                <span class="input-label">{{lang.PhoneNumber}}</span>
                                                                 <input name="phoneNumber" type="text" class="form-control" ng-model="candidateData.phoneNumber" required>
-                                                                <span class="form-error" ng-show="addForm.phoneNumber.$touched && addForm.phoneNumber.$invalid">this field is required</span>
+                                                                <span class="form-error" ng-show="addForm.phoneNumber.$touched && addForm.phoneNumber.$invalid">{{lang.thisfieldisrequired}}</span>
                                                                 
                                                 
                                                               </label>
                                             <div>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Campaign</span>
+                                                            <span class="input-label">{{lang.Campaign}}</span>
                                                             <textarea name="campaign" id="campaign-textarea" class="form-control" type="text"  ng-model="candidateData.campaign" required cols="6" rows="4"></textarea>
-                                                            <span class="form-error" ng-show="addForm.campaign.$touched && addForm.campaign.$invalid">this field is required</span>
+                                                            <span class="form-error" ng-show="addForm.campaign.$touched && addForm.campaign.$invalid">{{lang.thisfieldisrequired}}</span>
                                                           </label>
                                                         </div>
                                                         <div>
                                                           <label class="item">
-                                                            <button ng-click="addCandidate(candidateData)" ng-disabled="addForm.$invalid || addForm.$pending || userFound" class="btn btn-primary" type="submit">Add Candidate</button>
+                                                            <button ng-click="addCandidate(candidateData)" ng-disabled="addForm.$invalid || addForm.$pending || userFound" class="btn btn-primary" type="submit">{{lang.addCandidate}}</button>
                                                           </label>
                                                         </div>
                                                       </form>
@@ -175,11 +181,22 @@
                                             </div>
                                             </div>
 
-
+                                            
                                         </div>
+                                        
                                         </div>
                                      </body>
-<script>
-                                              
- </script>
+                                     <script>
+                                      $(function(){
+                                      
+                if(localStorage.getItem("lang") == "AR")
+      {
+      document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+      }
+      else{
+        if(document.querySelector("link[href='./css/custom_ar.css']"))
+        document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+      }
+    })
+                            </script>                                    
                                         </html>

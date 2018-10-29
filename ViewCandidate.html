@@ -10,6 +10,7 @@
                                                 <!-- CSS Files -->
                                                 <link href="./css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
                                                 <link href="./css/custom.css" rel="stylesheet"/>
+                                                <link href="./css/no.css" rel="stylesheet">
                                              
                                              
                                         
@@ -88,13 +89,13 @@
                                                     <tr>
                                                       
 
-                                            <th>address</th>
-                                                       <th> Candidate Name </th>
+                                            <th>{{lang.address}}</th>
+                                                       <th> {{lang.CandidateName}} </th>
                                                     <!--  <th >Candidate Id</th> -->
                                                     <th>id</th> 
-                                                    <th>City</th>
-                                                      <th>Number of Votes</th>
-                                                     <th>Operations</th>
+                                                    <th>{{lang.city}}</th>
+                                                      <th>{{lang.NumberOfVotes}}</th>
+                                                     <th>{{lang.Operations}}</th>
                                                     </tr>
                                                     <tbody ng-repeat ="x in candidates">
                                                     <tr>
@@ -168,7 +169,18 @@
                                 </div>
 
                                 <script>
-                                  </script>
+                                  $(function(){
+                                  debugger
+            if(localStorage.getItem("lang") == "AR")
+  {
+  document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+  }
+  else{
+    if(document.querySelector("link[href='./css/custom_ar.css']"))
+    document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+  }
+})
+                        </script> 
                                   <div ng-include="'shared/footer.html'"></div>
                                 </body>
 

@@ -10,6 +10,7 @@
                                                     <!-- CSS Files -->
                                                     <link href="./css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
                                                     <link href="./css/custom.css" rel="stylesheet"/>
+                                                    <link href="./css/no.css" rel="stylesheet">
                                                  
                                                  
                                             
@@ -87,13 +88,13 @@
                                                 <form name="addForm" id="addForm">
                                                     
                                                         <label class="item item-input">
-                                                                <span class="input-label">UserName</span>
+                                                                <span class="input-label">{{lang.UserName}}</span>
                                                                 <input type="text"  name="UserName" ng-model="judgment.UserName" class="form-control" required>
                                                                 <span class="form-error" ng-show="addForm.UserName.$touched && addForm.UserName.$invalid">this field is required</span>
                                                                 
                                                               </label>
                                                               <label class="item item-input">
-                                                                    <span class="input-label">Password</span>
+                                                                    <span class="input-label">{{lang.Password}}</span>
                                                                     <input type="password"  name="Password" ng-model="judgment.Password" class="form-control" required>
                                                                     <span class="form-error" ng-show="addForm.Password.$touched && addForm.Password.$invalid">this field is required</span>
                                                                     
@@ -101,7 +102,7 @@
 
                                                                   <div>
                                                                         <label class="item">
-                                                                          <button ng-click="addJudgment(judgment)" ng-disabled="addForm.$invalid" class="btn btn-primary" type="submit">Add Judgment</button>
+                                                                          <button ng-click="addJudgment(judgment)" ng-disabled="addForm.$invalid" class="btn btn-primary" type="submit">{{lang.addJudjment}}</button>
                                                                         </label>
                                                                       </div>
                                             
@@ -123,7 +124,17 @@
                                         </body>
 
                                         <script>
-                                                                   
-                                        </script>
+                                          $(function(){
+                                          
+                    if(localStorage.getItem("lang") == "AR")
+          {
+          document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+          }
+          else{
+            if(document.querySelector("link[href='./css/custom_ar.css']"))
+            document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+          }
+        })
+                                </script> 
 
                                         </html>

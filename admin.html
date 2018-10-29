@@ -10,6 +10,8 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="./css/no.css" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <script src="./js/core/jquery.min.js"></script>
 <script src="https://cdn.ethers.io/scripts/ethers-v3.min.js"
@@ -96,7 +98,19 @@ type="text/javascript">
 
 
 	
-
+    <script>
+        $(function(){
+        
+if(localStorage.getItem("lang") == "AR")
+{
+document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+}
+else{
+if(document.querySelector("link[href='./css/custom_ar.css']"))
+document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+}
+})
+</script> 
 	
 
 </body>
