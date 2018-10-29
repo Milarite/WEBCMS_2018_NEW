@@ -30,6 +30,20 @@ NationalNumber : "الرقم الوطني"
      settings:"Settings",
      logout:"Logout",
      VotingAppCMS:"Voting App CMS",
+     thisfieldisrequired :"this field is required",
+     address:"address",
+     CandidateName:"Candidate Name",
+     Id:"Id",
+     NumberOfVotes:"Number of Votes",
+     Operations:"Operations",
+     UserName:"UserName",
+     Password:"Password",
+     IsOptional:"Is Optional",
+     Threshold:"Threshold",
+     SelectDate:"Select Date",
+     SelectTime:"Select Time",
+     Save:"Save",
+     Logout:"Logout"
 
 
 
