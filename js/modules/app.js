@@ -7,13 +7,38 @@ angular.module('starter', [ 'starter.controllers','starter.services','starter.di
 
 NationalNumber : "الرقم الوطني",
 
+     Name:"الإسم",
+     DateOfBirth: "تاريخ الميلاد" ,
+     Password: "الرقم السري",
+     PasswordConfirmation: "تأكيد الرقم السري",
+     city:"المدينة",
+     Year:"السنه",
+     PhoneNumber:" رقم الهاتف",
+     Campaign:"الشعار الانتخابي",
+     addCandidate:"إضافة مرشح",
+     viewCandidates:"عرض المرشحين",
+     adminPanel:"لوحة التحكم",
+     addJudjment:"إضافةلجنة تحكيم",
+     settings:"الإعدادات",
+     logout:"تسجيل الخروج",
+     VotingAppCMS:"Voting App CMS",
+     thisfieldisrequired :"يجب ثعبئة الحقل",
+     address:"عنوان",
+     CandidateName:"إسم المرشح",
+     NumberOfVotes:"عدد الأصوات",
+     Operations:"العمليات",
+     UserName:"غسم المستخدم",
+     IsOptional:"اختياري",
+     Threshold:"النسبة",
+     SelectDate:"إختيار التاريخ",
+     SelectTime:"إختيار الوقت",
+     Save:"حفظ",
+     Arabic:"عربي"
 
 
 
-
-
-
- } : { 
+ }
+  : { 
      NationalNumber : "National Number",
      Name:"Name",
      DateOfBirth: "Date Of Birth" ,
@@ -23,7 +48,6 @@ NationalNumber : "الرقم الوطني",
      Year:"Year",
      PhoneNumber:"Phone Number",
      Campaign:"Campaign",
-     addCandidate:"Add Candidate",
      viewCandidates:"View candidate",
      adminPanel:"Admin panel",
      addCandidate:"Add candidate",
@@ -31,6 +55,20 @@ NationalNumber : "الرقم الوطني",
      settings:"Settings",
      logout:"Logout",
      VotingAppCMS:"Voting App CMS",
+     thisfieldisrequired :"this field is required",
+     address:"address",
+     CandidateName:"Candidate Name",
+     Id:"Id",
+     NumberOfVotes:"Number of Votes",
+     Operations:"Operations",
+     UserName:"UserName",
+     IsOptional:"Is Optional",
+     Threshold:"Threshold",
+     SelectDate:"Select Date",
+     SelectTime:"Select Time",
+     Save:"Save",
+     Arabic:"Arabic"
+    
 
 
 
