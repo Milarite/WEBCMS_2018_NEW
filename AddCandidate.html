@@ -163,14 +163,14 @@
                                                               </label>
                                             <div>
                                                           <label class="item item-input">
-                                                            <span class="input-label">Campaign</span>
+                                                            <span class="input-label">{{lang.Campaign}}</span>
                                                             <textarea name="campaign" id="campaign-textarea" class="form-control" type="text"  ng-model="candidateData.campaign" required cols="6" rows="4"></textarea>
                                                             <span class="form-error" ng-show="addForm.campaign.$touched && addForm.campaign.$invalid">this field is required</span>
                                                           </label>
                                                         </div>
                                                         <div>
                                                           <label class="item">
-                                                            <button ng-click="addCandidate(candidateData)" ng-disabled="addForm.$invalid || addForm.$pending || userFound" class="btn btn-primary" type="submit">Add Candidate</button>
+                                                            <button ng-click="addCandidate(candidateData)" ng-disabled="addForm.$invalid || addForm.$pending || userFound" class="btn btn-primary" type="submit">{{lang.addCandidate}}</button>
                                                           </label>
                                                         </div>
                                                       </form>

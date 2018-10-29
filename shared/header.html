@@ -22,7 +22,7 @@
         <li class="nav-item active  ">
           <a class="nav-link admin-btn"  href="javascript:void(0)">
             <i class="material-icons">dashboard</i>
-            <p>Admin Panel</p>
+            <p> {{lang.adminPanel}}</p>
           </a>
         </li>
         <li class="nav-item ">
@@ -34,38 +34,38 @@
         <li class="nav-item ">
           <a class="nav-link" ng-if="!candidate_items && (judgment_items || admin_items) "  href="./ViewCandidate.html">
             <i class="fas fa-eye"></i>
-            <p>View Candidates</p>
+            <p>{{lang.viewCandidates}}</p>
           </a>
         </li>
         <li class="nav-item ">
           <a class="nav-link" ng-if="!candidate_items && (judgment_items || admin_items)"  href="./AddCandidate.html">
             <i class="fas fa-plus"></i>
-            <p>Add Candidate</p>
+            <p>{{lang.addCandidate}}</p>
           </a>
         </li>
         <li class="nav-item ">
                 <a class="nav-link" ng-if="!candidate_items && !judgment_items && admin_items"  href="./AddJudgment.html">
                   <i class="fas fa-plus"></i>
-                  <p>Add Judgment</p>
+                  <p>{{lang.addJudjment}}</p>
                 </a>
               </li>
         <li class="nav-item ">
             <a class="nav-link" ng-if="!candidate_items && !judgment_items && admin_items"  href="./settings.html">
               <i class="material-icons">settings</i>
-              <p>Settings</p>
+              <p>{{lang.settings}}</p>
             </a>
           </li>
      
         <li class="nav-item ">
           <a class="nav-link" href="javascript:void(0)" ng-click="logout()">
             <i class="material-icons">logout</i>
-            <p>Logout</p>
+            <p>{{lang.logout}}</p>
           </a>
         </li>
         <li class="nav-item ">
             <a class="nav-link" href="javascript:void(0)" ng-click="switchLanguage()">
               <i class="material-icons">arabic</i>
-              <p>arabic</p>
+              <p>{{lang.Arabic}}</p>
             </a>
           </li>
         <!-- <li class="nav-item active-pro ">

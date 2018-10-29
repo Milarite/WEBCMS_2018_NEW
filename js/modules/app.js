@@ -2,23 +2,22 @@ angular.module('starter', [ 'starter.controllers','starter.services','starter.di
 {
 
  let role = localStorage.getItem("role");
-
- let lang =  localStorage.getItem("ar") ? {
+ let lang =  localStorage.getItem("lang") == "AR" ? {
 
 NationalNumber : "الرقم الوطني",
 
      Name:"الإسم",
      DateOfBirth: "تاريخ الميلاد" ,
-     Password: "الرقم السري",
+     Password: "كلمة المرور",
      PasswordConfirmation: "تأكيد الرقم السري",
      city:"المدينة",
-     Year:"السنه",
+     Year:"السنة",
      PhoneNumber:" رقم الهاتف",
-     Campaign:"الشعار الانتخابي",
+     Campaign:"الشعار الإنتخابي",
      addCandidate:"إضافة مرشح",
      viewCandidates:"عرض المرشحين",
      adminPanel:"لوحة التحكم",
-     addJudjment:"إضافةلجنة تحكيم",
+     addJudjment:"إضافة لجنة تحكيم",
      settings:"الإعدادات",
      logout:"تسجيل الخروج",
      VotingAppCMS:"Voting App CMS",
@@ -27,7 +26,7 @@ NationalNumber : "الرقم الوطني",
      CandidateName:"إسم المرشح",
      NumberOfVotes:"عدد الأصوات",
      Operations:"العمليات",
-     UserName:"غسم المستخدم",
+     UserName:"إسم المستخدم",
      IsOptional:"اختياري",
      Threshold:"النسبة",
      SelectDate:"إختيار التاريخ",
