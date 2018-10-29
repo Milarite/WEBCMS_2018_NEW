@@ -17,6 +17,7 @@
  <link rel="stylesheet" href="./css/md-time-picker.css"/>
  <link rel="stylesheet" href="./css/angular-moment-picker.css"/>
  <link rel="stylesheet" href="./css/angular-time-picker.css"/>
+ <link href="./css/no.css" rel="stylesheet">
 
                                                 <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
                                                 <link rel="stylesheet" href="/resources/demos/style.css">
@@ -163,14 +164,16 @@
                                                   </div>
                                                   <script>
                                                     $(function(){
-                                            if(localStorage.getItem("lang") == "AR")
-                                            {
-                                            document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
-                                            }
-                                            else{
-                                              document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
-                                            }
-                                          })
+                                                    
+                              if(localStorage.getItem("lang") == "AR")
+                    {
+                    document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+                    }
+                    else{
+                      if(document.querySelector("link[href='./css/custom_ar.css']"))
+                      document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+                    }
+                  })
                                           </script> 
                                                 
                                 </body>
