@@ -2,6 +2,20 @@ angular.module('starter', [ 'starter.controllers','starter.services','starter.di
 {
 
  let role = localStorage.getItem("role");
+
+ let lang =  localStorage.getItem("ar") ? {
+
+NationalNumber : "الرقم الوطني"
+
+
+
+
+
+
+ } : { NationalNumber : "National Number"}
+
+ $rootScope.lang  = lang;
+
  if(role != undefined){
      
      if(role == "candidate"){

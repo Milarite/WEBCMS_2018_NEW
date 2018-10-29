@@ -83,7 +83,7 @@
                                                
                                                 <form name="addForm" id="addForm">
                                                         <label class="item item-input">
-                                                            <span class="input-label">National Number</span>
+                                                            <span class="input-label">{{lang.NationalNumber}}</span>
                                                             <input type="text" ng-change="nationlIdValidation(candidateData.candidateId)" name="candidateId" ng-model="candidateData.candidateId" class="form-control" required>
                                                             <span class="form-error" ng-show="addForm.candidateId.$touched && addForm.candidateId.$invalid">this field is required</span>
                                                             <span class="form-error" ng-show="userFound">user already exist </span>
@@ -188,8 +188,14 @@
                                      </body>
 <script>
           $(function(){
-  
+            document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+  if(localStorage.getItem("lang") == "ar")
+  {
   //document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+  }
+  else{
+    //document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+  }
 })
 </script>                                      
                                         </html>
