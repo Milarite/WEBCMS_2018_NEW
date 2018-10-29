@@ -2,6 +2,25 @@ var app = angular.module('starter.controllers',[]);
 
 
 app.controller('addCandidateCtrl',function($scope,Web3jsObj,getRole,$window,FireBaseObj){
+
+    $scope.switchLanguage=function(){
+        var lang= localStorage.getItem("lang");
+        if(lang==null){
+            localStorage.setItem("lang","AR");
+ 
+            
+        }
+ else if(lang=="AR")
+ 
+ 
+ {
+     localStorage.setItem("lang","Eng");
+ }
+ else{
+     localStorage.setItem("lang","AR");
+     }
+     location.reload();
+     }
     const auth =  FireBaseObj.getFireBaseAuth();
 ///// fill dropDownList
 let ipfs = IpfsApi('ipfs.infura.io', '5001', {protocol: 'https'})
@@ -603,6 +622,24 @@ $scope.showProfile=function(_nationalId){
 });
 
 app.controller("CandidateProfileCtrl",function($scope,Web3jsObj,getRole,$window,Helper,FireBaseObj){
+    $scope.switchLanguage=function(){
+        var lang= localStorage.getItem("lang");
+        if(lang==null){
+            localStorage.setItem("lang","AR");
+ 
+            
+        }
+ else if(lang=="AR")
+ 
+ 
+ {
+     localStorage.setItem("lang","Eng");
+ }
+ else{
+     localStorage.setItem("lang","AR");
+     }
+     location.reload();
+     }
     const auth =  FireBaseObj.getFireBaseAuth();
     $scope.logout=function(){
         localStorage.removeItem("candidate_nationalId" );
@@ -783,6 +820,24 @@ $scope.CheckDate();
 
 });
 app.controller("settingsCtrl",function($scope,Web3jsObj,FireBaseObj){
+    $scope.switchLanguage=function(){
+        var lang= localStorage.getItem("lang");
+        if(lang==null){
+            localStorage.setItem("lang","AR");
+ 
+            
+        }
+ else if(lang=="AR")
+ 
+ 
+ {
+     localStorage.setItem("lang","Eng");
+ }
+ else{
+     localStorage.setItem("lang","AR");
+     }
+     location.reload();
+     }
     const auth =  FireBaseObj.getFireBaseAuth();
     $scope.logout=function(){
         localStorage.removeItem("candidate_nationalId" );
@@ -1196,7 +1251,7 @@ app.controller("addJudgmentCtrl",function($scope,FireBaseObj,$window,Web3jsObj)
 {
     const auth =  FireBaseObj.getFireBaseAuth();
     $scope.switchLanguage=function(){
-       var lang= localStorage.getItem();
+       var lang= localStorage.getItem("lang");
        if(lang==null){
            localStorage.setItem("lang","AR");
 

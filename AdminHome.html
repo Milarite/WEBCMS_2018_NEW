@@ -10,6 +10,7 @@
                                                 <!-- CSS Files -->
                                                 <link href="./css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
                                                 <link href="./css/custom.css" rel="stylesheet"/>
+                                                <link href="./css/no.css" rel="stylesheet">
                                              
                                              
                                         
@@ -100,16 +101,18 @@ window.location.href="/";
 }
 }
                                                       </script>
-                                                      <script>
-                                                        $(function(){
-                                                          if(localStorage.getItem("lang") == "AR")
-                                                {
-                                                document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
-                                                }
-                                                else{
-                                                  document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
-                                                }
-                                              })
-                                              </script> 
+                                                   <script>
+                                                    $(function(){
+                                                    
+                              if(localStorage.getItem("lang") == "AR")
+                    {
+                    document.querySelector("link[href='./css/no.css']").href = "./css/custom_ar.css";
+                    }
+                    else{
+                      if(document.querySelector("link[href='./css/custom_ar.css']"))
+                      document.querySelector("link[href='./css/custom_ar.css']").href = "./css/no.css'";
+                    }
+                  })
+                                          </script> 
                                             </body>
                                             </html>
