@@ -53,7 +53,8 @@
 <script src="./js/modules/angular-time-picker.js"></script>
 <script src="./js/modules/angular-datepicker.js"></script>
 <script src="./js/modules/directives.js"></script>
-                                                  <!-- app module-->
+<script src="./js/modules/ipfsApi.js"></script>                                                  <!-- app module-->
+                                                 <!-- app module-->
 <script src="./js/modules/abi.js"></script>
 <script src="./js/modules/app.js"></script>
 <script src="./js/modules/service.js"></script>
@@ -119,10 +120,14 @@
                                                             <input name="city" type="text" class="form-control" ng-model="candidateData.city" required>
                                                             <span class="form-error" ng-show="addForm.city.$touched && addForm.city.$invalid">this field is required</span> -->
                                                            <div>
-                                                            <label class="item item-input"> 
+                                                            <label class="item item-input">
+                                                           
                                                                 <span class="input-label">City</span> 
                                                                 <select name="city" ng-model="candidateData.city" class="form-control">
-                                                                  <option value="">Select City</option>                                                       
+                                                                  
+                                                                  <option ng-repeat="x in countries" value={{x}}>{{x}}</option>
+                                                                  <option value="">Select City</option> 
+                                                                  <!--                                                      
                                                               <option value="Amman">Amman</option>
                                                               
                                                               <option value="Irbid">Irbid</option>
@@ -135,6 +140,8 @@
                                                               <option value="Aqapa">Aqapa</option>
                                                               <option value="Rumtha">Rumtha</option>
                                                               <option value="salt">salt</option>
+                                                                  -->
+
                                                           
                                                             </select>
                                                           </label>
