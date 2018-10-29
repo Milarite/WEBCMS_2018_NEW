@@ -108,3 +108,32 @@ h3{
     
         background-color: #F38630 !important;
 }
+.content{
+    background-color:black
+
+    !important;
+
+    
+}
+.navbar.navbar-transparent{
+    background-color:black
+
+
+
+
+
+    !important;
+}
+.btn.btn-primary{
+    background-color: #F38630 !important;
+}
+.btn.btn-primary:hover{
+    background-color: rgb(223, 139, 76) !important ;
+}
+.input-label {
+    color:white !important;
+    font-size: 13pt;
+}
+.sidebar-background{
+    background-color: rgba(169, 199, 181, 0.76) !important;
+}
