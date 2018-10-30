@@ -138,3 +138,7 @@ h3{
     background-color: rgba(169, 199, 181, 0.76) !important;
 
 }
+
+.main-panel > .content{
+    height:100% !important;
+}
