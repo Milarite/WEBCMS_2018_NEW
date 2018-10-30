@@ -35,7 +35,11 @@ else{
     hash = "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo";
 }
 let ipfs = IpfsApi('ipfs.infura.io', '5001', {protocol: 'https'})
+<<<<<<< HEAD
 ipfs.files.cat(hash, (error, buf) => {
+=======
+ipfs.files.cat("QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo", (error, buf) => {
+>>>>>>> d70cf690332d7a60dacbabbf29dfad6f48f4f8b9
     if(error) console.log(error);
     let result = buf.toString('utf8');
     result = JSON.parse(result);
@@ -481,6 +485,24 @@ if(result){
         }
       ) 
       */
+     $scope.switchLanguage=function(){
+        var lang= localStorage.getItem("lang");
+        if(lang==null){
+            localStorage.setItem("lang","AR");
+ 
+            
+        }
+ else if(lang=="AR")
+ 
+ 
+ {
+     localStorage.setItem("lang","Eng");
+ }
+ else{
+     localStorage.setItem("lang","AR");
+     }
+     location.reload();
+     }
     const auth =  FireBaseObj.getFireBaseAuth();
      $scope.logout=function(){
         localStorage.removeItem("candidate_nationalId" );

@@ -25,9 +25,12 @@
 }
 
 .login-field{
-    height:20px;
-    width:100%;
-    margin-bottom:20px;
+    height:25px;
+    width:75%;
+    margin-bottom:15px;
+    border-radius: 50px;
+    background-color: black;
+
 }
 
 .profile-box{
@@ -95,12 +98,18 @@
 }
 
 .btn-custom{
-    width:100%;
-    height:50px;
-    background-color:#93a0ae;
+    width:180xp !important;
+    height:30px;
+    background-color:rgb(4, 4, 15);
     color:white;
 }
-
+.login100-form-bgbtn{
+    width:150px !important;
+}
+.wrap-login100-form-btn
+{
+    width : initial !important;
+}
 h3{
     margin: 0px 0 0px;
 }
@@ -108,3 +117,47 @@ h3{
     
         background-color: #F38630 !important;
 }
+.content{
+    background-color:black
+
+    !important;
+
+    
+}
+.navbar.navbar-transparent{
+    background-color:black
+
+
+
+
+
+    !important;
+}
+.btn.btn-primary{
+    background-color: #F38630 !important;
+}
+.btn.btn-primary:hover{
+    background-color: rgb(223, 139, 76) !important ;
+}
+.input-label {
+    color:white !important;
+    font-size: 13pt;
+}
+.sidebar-background{
+    background-color: rgba(169, 199, 181, 0.76) !important;
+
+}
+
+.main-panel > .content{
+    height:100% !important;
+}
+.container-login100{
+ background-color: black; 
+}
+.wrap-login100{
+    background-color: #F38630 !important;
+}
+.content-custom{
+    background-color:black !important;
+}
+
