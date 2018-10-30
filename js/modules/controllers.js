@@ -472,6 +472,24 @@ if(result){
         }
       ) 
       */
+     $scope.switchLanguage=function(){
+        var lang= localStorage.getItem("lang");
+        if(lang==null){
+            localStorage.setItem("lang","AR");
+ 
+            
+        }
+ else if(lang=="AR")
+ 
+ 
+ {
+     localStorage.setItem("lang","Eng");
+ }
+ else{
+     localStorage.setItem("lang","AR");
+     }
+     location.reload();
+     }
     const auth =  FireBaseObj.getFireBaseAuth();
      $scope.logout=function(){
         localStorage.removeItem("candidate_nationalId" );
