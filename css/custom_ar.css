@@ -6,7 +6,7 @@
 .content{
     text-align: right !important;
     direction: rtl !important;
-    width:820px !important;
+    width:100% !important;
 }
 .cust-cont{
         /* width: 500px; */
@@ -14,4 +14,15 @@
     direction: rtl !important;
     /* width: 500px; */
     margin-right: 280px !important;
+}
+.perfect-scrollbar-on .sidebar, .perfect-scrollbar-on .main-panel{
+    float:left !important;
+}
+.container-fluid{
+    background-color:black !important;
+    padding :0 0 0 0 !important;
+}
+
+.content-custom{
+    background-color:black !important;
 }

@@ -138,16 +138,17 @@ h3{
     background-color: rgba(169, 199, 181, 0.76) !important;
 
 }
-<<<<<<< HEAD
 
 .main-panel > .content{
     height:100% !important;
 }
-=======
 .container-login100{
  background-color: black; 
 }
 .wrap-login100{
     background-color: #F38630 !important;
 }
->>>>>>> f9ba9fdfd224414e0aaaba5f59ee86475528ee51
+.content-custom{
+    background-color:black !important;
+}
+
