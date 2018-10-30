@@ -23,11 +23,19 @@ app.controller('addCandidateCtrl',function($scope,Web3jsObj,getRole,$window,Fire
      }
     const auth =  FireBaseObj.getFireBaseAuth();
 ///// fill dropDownList
-let hash = localStorage.getItem('lang')  == "Eng" ? "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo" :
-"QmWNRScwsE6jBVWhZyTzfANXfvQk9HXBKWaQXWV6i5vWVf"; 
+let hash = null ;
+if(!localStorage.getItem('lang'))
+{
+    hash = "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo" ;
+}
+else if(localStorage.getItem("lang") == "AR"){
+   hash = "QmdadT2nVvWLxJeytJMEUaHugqqmuVn2YZ6tZYDh8TGmf7";
+} 
+else{
+    hash = "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo";
+}
 let ipfs = IpfsApi('ipfs.infura.io', '5001', {protocol: 'https'})
-ipfs.files.cat("QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo", (error, buf) => {
-   debugger;
+ipfs.files.cat(hash, (error, buf) => {
     if(error) console.log(error);
     let result = buf.toString('utf8');
     result = JSON.parse(result);

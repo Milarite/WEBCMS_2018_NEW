@@ -32,7 +32,8 @@ NationalNumber : "الرقم الوطني",
      SelectDate:"إختيار التاريخ",
      SelectTime:"إختيار الوقت",
      Save:"حفظ",
-     Arabic:"عربي"
+     Arabic:"عربي",
+     Selectcity:"اختيار المدينة"
 
 
 
@@ -66,7 +67,8 @@ NationalNumber : "الرقم الوطني",
      SelectDate:"Select Date",
      SelectTime:"Select Time",
      Save:"Save",
-     Arabic:"Arabic"
+     Arabic:"Arabic",
+     Selectcity:" Selectcity"
     
 
 
