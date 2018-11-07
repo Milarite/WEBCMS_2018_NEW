@@ -29,7 +29,9 @@
     width:75%;
     margin-bottom:15px;
     border-radius: 50px;
-    background-color: black;
+    background-color: #302f2d;
+    color: white;
+    padding-left: 12px;
 
 }
 
@@ -47,7 +49,7 @@
 .profile-header{
     width: 350px;
     height:100px;
-    background-color:#9c27b0;
+    background-color:#b33b29;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -98,9 +100,9 @@
 }
 
 .btn-custom{
-    width:180xp !important;
-    height:30px;
-    background-color:rgb(4, 4, 15);
+    width:150px !important;
+    height:40px;
+    background-color:lightblue;
     color:white;
 }
 .login100-form-bgbtn{
@@ -115,26 +117,26 @@ h3{
 }
 .admin-btn{
     
-        background-color: #F38630 !important;
+        background-color: #b33b29 !important;
 }
 .content{
-    background-color:black
-
-    !important;
+    background-color:black !important;
 
     
 }
 .navbar.navbar-transparent{
-    background-color:black
+    background-color:black !important;
+    
+    
+    
 
 
 
 
 
-    !important;
 }
 .btn.btn-primary{
-    background-color: #F38630 !important;
+    background-color: #b33b29 !important;
 }
 .btn.btn-primary:hover{
     background-color: rgb(223, 139, 76) !important ;
@@ -150,14 +152,35 @@ h3{
 
 .main-panel > .content{
     height:100% !important;
+    width: 100%;
+    
+}
+.main-panel{
+    background-color : black !important;
 }
 .container-login100{
- background-color: black; 
+ background-color:#302f2d; 
 }
 .wrap-login100{
-    background-color: #F38630 !important;
+    background-color: #b33b29 !important;
 }
 .content-custom{
     background-color:black !important;
 }
 
+label{
+    color: white !important;
+}
+p{
+    color:#ffff00;
+}
+body{
+    color: #302f2d;
+}
+a {
+    color: #302f2d;
+}
+.ng-not-empty{
+    color: #ffff00 !important;
+
+}

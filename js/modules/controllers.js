@@ -35,11 +35,7 @@ else{
     hash = "QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo";
 }
 let ipfs = IpfsApi('ipfs.infura.io', '5001', {protocol: 'https'})
-<<<<<<< HEAD
 ipfs.files.cat(hash, (error, buf) => {
-=======
-ipfs.files.cat("QmNrVwBRMzHWUBVZUzDhc35LUyh9zcBhFb4UFiaYUSUPDo", (error, buf) => {
->>>>>>> d70cf690332d7a60dacbabbf29dfad6f48f4f8b9
     if(error) console.log(error);
     let result = buf.toString('utf8');
     result = JSON.parse(result);
