@@ -112,7 +112,7 @@
                                                     
                                                      
                                                     <td> <label>{{lang.NumberOfVotes}} </label><input type="text" class="form-control"  numbers-only ng-model="data.NumOfVotes" name="numOfVotes" id="NumOfVotes" ></td>
-                                                    <td><span style="cursor:pointer;"  ng-click="UpdateSettings('votesCount',data)">{{lang.Save}}</span></td>
+                                                    <td class="saveSting"><span style="cursor:pointer;"  ng-click="UpdateSettings('votesCount',data)">{{lang.Save}}</span></td>
                                                 </tr>
                                               
                                                 <tr>
@@ -125,11 +125,11 @@
                                                             <label>{{lang.Threshold}}</label><input  ng-disabled ="isOptional" type="text" numbers-only class="form-control"  ng-model="data.Threshold" name="Threshold" id="Threshold" >
                                                         
                                                         </td>
-                                                        <td><span style="cursor:pointer;"  ng-click="UpdateSettings('Threshold',data)">{{lang.Save}}</span></td>
+                                                        <td class="saveSting"><span style="cursor:pointer;"  ng-click="UpdateSettings('Threshold',data)">{{lang.Save}}</span></td>
                                                     </tr>
                                                 <tr>
                                                         <td><label>{{lang.SelectDate}}</label><datepicker date-format="dd/MM/yyyy"><input type="text" class="form-control" name="StartDate"  ng-model="data.StartDate" ></datepicker></td>
-                                                        <td><span style="cursor:pointer;" ng-click="UpdateSettings('startDate',data)">{{lang.Save}}</span></td>
+                                                        <td class="saveSting"><span style="cursor:pointer;" ng-click="UpdateSettings('startDate',data)">{{lang.Save}}</span></td>
                                                     </tr>
                                                     <tr>
                                                         <td><label>{{lang.SelectTime}}</label> <wy-time-picker
@@ -142,12 +142,12 @@
                                                             data-apply-callback="onApplyTimePicker()"
                                                             data-clear-callback="onClearTimePicker()">
                                                         </wy-time-picker></label>
-                                                        <input type="text" readonly class="form-control" ng-model="data.period">
+                                                        <input type="text" readonly class="form-control red-input" ng-model="data.period">
                                                     </td>
                                                             <!-- <td><label>Start Time </label><input type="text" class="form-control" dn-timepicker="h:mm a" name="StartTime" ng-model="data.StartTime" ></td> -->
                                                             
                                                                    
-                                                            <td><span style="cursor:pointer;"  ng-click="UpdateSettings('period',data)">{{lang.Save}}</span></td>
+                                                            <td class="saveSting"><span style="cursor:pointer;"  ng-click="UpdateSettings('period',data)">{{lang.Save}}</span></td>
 
                                                         </tr>
                                                         <tr>
